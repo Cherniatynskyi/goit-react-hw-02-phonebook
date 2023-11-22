@@ -13,16 +13,16 @@ class App extends Component {
     filter: ''
   }
 
-  formSubmitHandler = data => {
+  formSubmitHandler = ({name,number}) => {
 
-    if (!this.checkExistHandler(data.name)) {
+    if (!this.checkExistHandler(name)) {
       return
     }
 
     const contact = {
       id: nanoid(),
-      name: data.name,
-      number: data.number
+      name,
+      number
     }
 
     this.setState(prevState => ({

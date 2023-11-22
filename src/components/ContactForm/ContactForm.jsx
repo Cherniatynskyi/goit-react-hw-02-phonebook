@@ -14,14 +14,12 @@ export class ContactForm extends Component {
 
     onSubmitForm = e => {
         e.preventDefault()
-    
         this.props.onSubmit(this.state)
         this.resetForm()
     }
 
     resetForm = () => {
-        this.setState({name: '',
-        number: ''})
+        this.setState({name: '', number: ''})
     }
 
     render() {
